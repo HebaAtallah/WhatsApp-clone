@@ -23,14 +23,6 @@
     <link rel="stylesheet" href="styles/responsive.css">
     <!-- /responsive -->
 
-    <!-- <script type="text/javascript">
-    $('.button-collapse').sideNav({
-         menuWidth: 300, // Default is 240
-         edge: 'left', // Choose the horizontal origin
-         closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-       }
-     );
-    </script> -->
   </head>
   <body ng-app="whatsAppCloneApp">
     <!--[if lt IE 7]>
@@ -38,23 +30,13 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-<div class="row">
-  <div class="col l3 m4 s12">
+
     <header>
-      <nav class="top-nav">
-        <div class="container">
-          <!-- <div class="nav-wrapper"><a class="page-title">SideNav</a></div> -->
-        </div>
-      </nav>
+
       <div class="container"><a href="" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
 
-      <!-- <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a> -->
-
       <ul id="nav-mobile" class="side-nav fixed left-nav">
-        <nav class="top-nav user-nav grey lighten-3">
+        <nav class="top-nav user-nav blue-grey lighten-5">
           <div class="container">
             <div class="nav-wrapper">
               <img src="images/flight.jpg" alt="User Image" class="circle responsive-img user-image">
@@ -76,7 +58,7 @@
         <!-- Chat Item  -->
         <li class="chat-item">
 
-          <a href="#/" class="waves-effect waves-teal">
+          <a href="#/chat" class="waves-effect waves-teal">
             <div class="row">
                <div class="col l3 s4">
                  <img src="images/flight.jpg" alt="Chat Images" class="circle responsive-img chat-image"/>
@@ -104,7 +86,7 @@
         <!-- Chat Item  -->
         <li class="chat-item">
 
-          <a href="#/" class="waves-effect waves-teal">
+          <a href="#/chat" class="waves-effect waves-teal">
             <div class="row">
                <div class="col l3 s4">
                  <img src="images/avatar1.png" alt="Chat Images" class="circle responsive-img chat-image"/>
@@ -133,7 +115,7 @@
         <!-- Chat Item  -->
         <li class="chat-item">
 
-          <a href="#/" class="waves-effect waves-teal">
+          <a href="#/chat" class="waves-effect waves-teal">
             <div class="row">
                <div class="col l3 s4">
                  <img src="images/avatar2.png" alt="Chat Images" class="circle responsive-img chat-image"/>
@@ -161,7 +143,7 @@
         <!-- Chat Item  -->
         <li class="chat-item">
 
-          <a href="#/" class="waves-effect waves-teal">
+          <a href="#/chat" class="waves-effect waves-teal">
             <div class="row">
                <div class="col l3 s4">
                  <img src="images/avatar3.png" alt="Chat Images" class="circle responsive-img chat-image"/>
@@ -189,7 +171,7 @@
         <!-- Chat Item  -->
         <li class="chat-item">
 
-          <a href="#/" class="waves-effect waves-teal">
+          <a href="#/chat" class="waves-effect waves-teal">
             <div class="row">
                <div class="col l3 s4">
                  <img src="images/flight.jpg" alt="Chat Images" class="circle responsive-img chat-image"/>
@@ -217,7 +199,7 @@
         <!-- Chat Item  -->
         <li class="chat-item">
 
-          <a href="#/" class="waves-effect waves-teal">
+          <a href="#/chat" class="waves-effect waves-teal">
             <div class="row">
                <div class="col l3 s4">
                  <img src="images/flight.jpg" alt="Chat Images" class="circle responsive-img chat-image"/>
@@ -245,7 +227,7 @@
         <!-- Chat Item  -->
         <li class="chat-item">
 
-          <a href="#/" class="waves-effect waves-teal">
+          <a href="#/chat" class="waves-effect waves-teal">
             <div class="row">
                <div class="col l3 s4">
                  <img src="images/flight.jpg" alt="Chat Images" class="circle responsive-img chat-image"/>
@@ -274,7 +256,7 @@
         <!-- Chat Item  -->
         <li class="chat-item">
 
-          <a href="#/" class="waves-effect waves-teal">
+          <a href="#/chat" class="waves-effect waves-teal">
             <div class="row">
                <div class="col l3 s4">
                  <img src="images/flight.jpg" alt="Chat Images" class="circle responsive-img chat-image"/>
@@ -302,12 +284,16 @@
         <!-- /List of chats -->
       </ul>
     </header>
-  </div>
-  
-    <div class="col l9 m8 s12">
-      <div ng-view=""></div>
-    </div>
 
+  <div class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m9 l10">
+            <div ng-view=""></div>
+        </div>
+
+      </div>
+    </div>
   </div>
 
 
@@ -346,11 +332,5 @@
         <!-- custom js -->
         <script src="scripts/js/sideNav.js"></script>
         <!-- custom js -->
-
-        <!-- <script type="text/javascript">
-        $(document).ready(function(){
-            $(".button-collapse").sideNav();
-        )};
-        </script> -->
 </body>
 </html>

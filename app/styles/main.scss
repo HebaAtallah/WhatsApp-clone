@@ -104,7 +104,7 @@ ul.side-nav.fixed li.logo {
 ul.side-nav.fixed {
   overflow: hidden;
   // width: 30%;
-  width: 341px !important;
+  width: 341px;
 
   li {
     line-height: 44px;
@@ -144,12 +144,6 @@ nav.top-nav {
   height: 59px;
   box-shadow: none;
 
-  // not using
-  // a.page-title {
-  //   line-height: 122px;
-  //   font-size: 48px;
-  // }
-
   &.user-nav{
     margin-bottom: 71px;
 
@@ -157,6 +151,9 @@ nav.top-nav {
       width: 40px;
       height: 40px;
       margin-top: 8px;
+    }
+    .nav-wrapper{
+      text-align: center;
     }
   }
 }
@@ -166,11 +163,11 @@ a.button-collapse.top-nav {
   text-align: center;
   height: 48px;
   width: 48px;
-  left: 7.5%;
-  top: 0;
+  left: 0.5%;
+  top: -4%;
   float: none;
   margin-left: 1.5rem;
-  color: #fff;
+  color: #00838F;
   font-size: 36px;
   z-index: 2;
 
@@ -367,4 +364,19 @@ $sidenav-item-height: 64px !default;
   display: inline-block;
   height: 100%;
   pointer-events: none;
+}
+
+
+.welcome-img{
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+p.welcome-status{
+  font-size: 2.28rem;
+  color: #444;
+}
+.main{
+  padding-left: 341px;
 }
