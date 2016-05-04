@@ -1,0 +1,58 @@
+
+/**********************************
+  Tablets
+**********************************/
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .chat-item{
+    // height: 76px;
+
+    img.chat-image{
+      width: 39px;
+      height: 39px;
+    }
+    div.chat-details{
+      p.chat-title{
+        font-size: 13px;
+      }
+      span.chat-time{
+        // font-size: 10px;
+        display: none;
+      }
+      p.chatMsg-details{
+        // font-size: 13px;
+        // line-height: 20px;
+        // margin-top: 0;
+        // margin-bottom: 14px;
+        // color: rgba(0,0,0,.6);
+
+      }
+    }
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
+  #front-page-nav ul.side-nav {
+    li {
+      float: none;
+      padding: 0 15px;
+
+      &:hover { background-color: #ddd; }
+      .active { background-color: transparent; }
+    }
+    a {
+      color: #444;
+    }
+  }
+
+}
+
+
+
+@media (min-width: 991px) {
+  ul.side-nav.fixed{
+    // width: 30% !important;
+    width: 341px !important;
+  }
+}
