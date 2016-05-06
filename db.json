@@ -1,0 +1,169 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Heba",
+      "lastMessage": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "time": "10:00 AM",
+      "messages": [
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "time": "10:00 AM",
+          "type": "in"
+        },
+        {
+          "details": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          "time": "10:00 AM",
+          "type": "out"
+        },
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+          "time": "8:00 AM",
+          "type": "in"
+        },
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "time": "10:00 AM",
+          "type": "out"
+        },
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "time": "10:00 AM",
+          "type": "in"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Ahmad",
+      "lastMessage": "qswqdwdq",
+      "time": "10:00 AM",
+      "messages": [
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "time": "10:00 AM",
+          "type": "in"
+        },
+        {
+          "details": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          "time": "10:00 AM",
+          "type": "out"
+        },
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+          "time": "8:00 AM",
+          "type": "in"
+        },
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "time": "10:00 AM",
+          "type": "out"
+        },
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "time": "10:00 AM",
+          "type": "in"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Mohammad",
+      "lastMessage": "qswqdwdq",
+      "time": "10:00 AM",
+      "messages": [
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "time": "10:00 AM",
+          "type": "in"
+        },
+        {
+          "details": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          "time": "10:00 AM",
+          "type": "out"
+        },
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+          "time": "8:00 AM",
+          "type": "in"
+        },
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "time": "10:00 AM",
+          "type": "out"
+        },
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "time": "10:00 AM",
+          "type": "in"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Heba Albaba",
+      "lastMessage": "qswqdwdq",
+      "time": "10:00 AM",
+      "messages": [
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "time": "10:00 AM",
+          "type": "in"
+        },
+        {
+          "details": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          "time": "10:00 AM",
+          "type": "out"
+        },
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+          "time": "8:00 AM",
+          "type": "in"
+        },
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "time": "10:00 AM",
+          "type": "out"
+        },
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "time": "10:00 AM",
+          "type": "in"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Sara",
+      "lastMessage": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "time": "5:00PM",
+      "messages": [
+        {
+          "details": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          "time": "5:00 AM",
+          "type": "in"
+        },
+        {
+          "details": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+          "time": "10:00 AM",
+          "type": "out"
+        },
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+          "time": "8:00 AM",
+          "type": "in"
+        },
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "time": "10:00 AM",
+          "type": "out"
+        },
+        {
+          "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+          "time": "10:00 AM",
+          "type": "in"
+        }
+      ]
+    }
+  ]
+}
