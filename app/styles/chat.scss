@@ -1,0 +1,92 @@
+
+/* chat Style
+   ========================================================================== */
+
+.chat-top-nav{
+     .chat-image{
+       width: 40px;
+       margin-top: 8px;
+       margin-left: 10px;
+     }
+   }
+.chat-title{
+  margin-top: 20px;
+  color: #fff;
+}
+
+.chat-details{
+  margin-left: 17px;
+  margin-right: 17px;
+
+  .message-container{
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      margin: 10.66667px 0;
+      padding: 10.66667px 0;
+
+      .message-details{
+        padding: 10.66667px;
+        min-height: 42.66667px;
+        max-width: 60%;
+        margin: 0 10.66667px;
+        box-shadow: 0px 1px 0px 0px rgba(50, 50, 50, 0.3);
+        border-radius: 2px;
+        font-weight: 300;
+        position: relative;
+        /* word-break: break-all; */
+        &.message-in{
+          background: #0097a7;
+          float: left;
+          color: #ffffff;
+          border-radius: 10px;
+          border-top-left-radius: 0;
+          &:before{
+              border-width: 0 10px 10px 0;
+              border-color: transparent #0097a7 transparent transparent;
+              position: absolute;
+              top: 0;
+              left: -9px;
+            }
+        }
+        &.message-out{
+          background: #fff;
+          float: right;
+          color: #333;
+          border-radius: 10px;
+          border-top-right-radius: 0;
+          &:before{
+            border-width: 10px 10px 0 0;
+            border-color: #ffffff transparent transparent transparent;
+            position: absolute;
+            top: 0;
+            right: -9px;
+            }
+        }
+
+        &:before{
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+
+          }
+      }
+    }
+    .sendMessageForm{
+        .typeMessage{
+          background: #fff;
+          padding-left: 10px;
+          position: relative;
+
+          .typeMessage::-webkit-scrollbar {
+            width: 0 !important;
+          }
+        }
+        button{
+          position: absolute;
+          right: 0;
+          top: 35px;
+        }
+    }
+}
