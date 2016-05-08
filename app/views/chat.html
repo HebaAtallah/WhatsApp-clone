@@ -1,1 +1,47 @@
-<p>this is the chat view</p>
+<div class="">
+  <nav class="top-nav chat-top-nav cyan darken-2">
+      <div class="nav-wrapper z-depth-1">
+        <div class="row">
+          <!-- Contact Images -->
+          <div class="col l1">
+            <img src="images/flight.jpg" alt="User Image" class="circle responsive-img chat-image">
+          </div>
+
+          <!-- conatct title -->
+          <div class="col l2">
+            <h6 class="chat-title">Heba Atallah</h6>
+          </div>
+
+          <!-- images attach -->
+        </div>
+      </div>
+  </nav>
+
+  <div class="chat-details">
+
+      <div ng-repeat="messagesDetails in chatData.messages">
+
+        <div class="message-container">
+
+            <div class="message-details {{messagesDetails.type}}">
+
+              <p class="message-text">{{messagesDetails.details}}</p>
+              <p class="message-time">{{messagesDetails.time}}</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <form name="sendMessageForm" class="sendMessageForm" ng-submit="sendMessage()" method="post">
+      <textarea name="typeMessage" class="materialize-textarea typeMessage" ng-model="message" placeholder="Write a message"></textarea>
+
+      <button type="submit" class="btn-floating waves-effect waves-light cyan darken-3" name="name" value="">
+        <i class="material-icons">send</i>
+      </button>
+    </form>
+
+  </div>
+
+
+</div>
