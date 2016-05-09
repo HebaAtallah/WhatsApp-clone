@@ -26,28 +26,30 @@ var app=angular.module('whatsAppCloneApp')
         console.log("error");
       });
 
+      // get date
+      new Date($.now());
+      var dt = new Date();
+      var messageTime = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
 
       // sendMessage
       $scope.sendMessage = function(){
 
         // data object
         var data = {
-              messages :$scope.chatData.messages
+            lastMessage:$scope.message,
+            time:messageTime,
+            messages :$scope.chatData.messages
 
         };
 
         var image=$scope.image;
         var messageDetails=$scope.message;
 
-        // get date
-        new Date($.now());
-        var dt = new Date();
-        var times = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-
 
         // uploading functions
         var uploadOnlyImage = function() {
-          data.messages.push({'time':times,'type':'message-out',image:'images/'+image});
+          data.messages.push({'time':messageTime,'type':'message-out',image:'images/'+image});
+          // data.lastMessage.push({})
           var url = 'http://localhost:3000/data2/2';
             $http.patch(url, data).then(function (response) {
               console.log(response.data);
@@ -62,7 +64,7 @@ var app=angular.module('whatsAppCloneApp')
         };
 
         var uploadOnlyText = function() {
-          data.messages.push({details:messageDetails,'time':times,'type':'message-out'});
+          data.messages.push({details:messageDetails,'time':messageTime,'type':'message-out'});
           var url = 'http://localhost:3000/data2/2';
             $http.patch(url, data).then(function (response) {
               $scope.message='';
@@ -75,7 +77,7 @@ var app=angular.module('whatsAppCloneApp')
         };
 
         var uploadTextAndImage = function() {
-          data.messages.push({details:messageDetails,'time':times,'type':'message-out',image:'images/'+image});
+          data.messages.push({details:messageDetails,'time':messageTime,'type':'message-out',image:'images/'+image});
           var url = 'http://localhost:3000/data2/2';
             $http.patch(url, data).then(function (response) {
               console.log(response.data);
