@@ -96,6 +96,9 @@
           }
       }
     }
+    .alertMessage{
+      color: red;
+    }
     .send-conatiner{
       position: relative;
         .typeMessage{
@@ -103,7 +106,7 @@
           padding-left: 10px;
           position: relative;
 
-          .typeMessage::-webkit-scrollbar {
+          &::-webkit-scrollbar {
             width: 0 !important;
           }
         }
