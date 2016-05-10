@@ -7,6 +7,10 @@ WhatsApp Clone can send and receive Text, Images, emoji.
 
 ## Build & development
 
+Run `npm install` to download node_modules.
+
+Run `bower install` to download bower component.
+
 Run `grunt` for building and `grunt serve` for preview.
 
 Run `json-server db.json` To get the data from backend.
