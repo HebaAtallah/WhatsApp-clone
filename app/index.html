@@ -17,12 +17,16 @@
 
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/chat.css">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/nanoscroller.css">
+    <link rel="stylesheet" href="styles/emoji.css">
+
+    <!-- endbuild -->
     <!-- responsive -->
     <link rel="stylesheet" href="styles/responsive.css">
     <!-- /responsive -->
-
   </head>
   <body ng-app="whatsAppCloneApp">
     <!--[if lt IE 7]>
@@ -47,32 +51,32 @@
         <!-- search -->
         <li class="search grey lighten-5">
           <div class="search-wrapper card">
-            <input id="search" placeholder="Search a chat"><i class="material-icons">search</i>
+            <input id="search" placeholder="Search a contact"><i class="material-icons">search</i>
             <div class="search-results"></div>
           </div>
         </li>
         <!-- /search -->
 
-        <!-- List of chats -->
+        <!-- List of contacts -->
 
-        <!-- Chat Item  -->
-        <li class="chat-item">
+        <!-- contact Item  -->
+        <li class="contact-item">
 
           <a href="#/chat" class="waves-effect waves-teal">
             <div class="row">
                <div class="col l3 s4">
-                 <img src="images/flight.jpg" alt="Chat Images" class="circle responsive-img chat-image"/>
+                 <img src="images/flight.jpg" alt="contact Images" class="circle responsive-img contact-image"/>
                </div>
                <div class="col l9 s8">
-                 <div class="chat-details">
+                 <div class="contact-details">
 
                    <div class="clearfix">
-                     <p class="chat-title left">Heba Albaba</p>
-                     <span class="chat-time right">10:00 Am</span>
+                     <p class="contact-title left">Heba Albaba</p>
+                     <span class="contact-time right">10:00 Am</span>
                    </div>
 
                    <div class="clearfix">
-                     <p class="truncate chatMsg-details">Lorem ipsum dolor sit amsit amsit amsit amsit am</p>
+                     <p class="truncate contactMsg-details">Lorem ipsum dolor sit amsit amsit amsit amsit am</p>
                    </div>
                  </div>
 
@@ -81,26 +85,26 @@
           </a>
 
         </li>
-        <!-- /Chat Item -->
+        <!-- /contact Item -->
 
-        <!-- Chat Item  -->
-        <li class="chat-item">
+        <!-- contact Item  -->
+        <li class="contact-item">
 
           <a href="#/chat" class="waves-effect waves-teal">
             <div class="row">
                <div class="col l3 s4">
-                 <img src="images/avatar1.png" alt="Chat Images" class="circle responsive-img chat-image"/>
+                 <img src="images/avatar1.png" alt="contact Images" class="circle responsive-img contact-image"/>
                </div>
                <div class="col l9 s8">
-                 <div class="chat-details">
+                 <div class="contact-details">
 
                    <div class="clearfix">
-                     <p class="chat-title left">Heba Albaba</p>
-                     <span class="chat-time right">10:00 Am</span>
+                     <p class="contact-title left">Heba Albaba</p>
+                     <span class="contact-time right">10:00 Am</span>
                    </div>
 
                    <div class="clearfix">
-                     <p class="truncate chatMsg-details">Lorem ipsum dolor sit am</p>
+                     <p class="truncate contactMsg-details">Lorem ipsum dolor sit am</p>
                    </div>
                  </div>
 
@@ -109,27 +113,27 @@
           </a>
 
         </li>
-        <!-- /Chat Item -->
+        <!-- /contact Item -->
 
 
-        <!-- Chat Item  -->
-        <li class="chat-item">
+        <!-- contact Item  -->
+        <li class="contact-item">
 
           <a href="#/chat" class="waves-effect waves-teal">
             <div class="row">
                <div class="col l3 s4">
-                 <img src="images/avatar2.png" alt="Chat Images" class="circle responsive-img chat-image"/>
+                 <img src="images/avatar2.png" alt="contact Images" class="circle responsive-img contact-image"/>
                </div>
                <div class="col l9 s8">
-                 <div class="chat-details">
+                 <div class="contact-details">
 
                    <div class="clearfix">
-                     <p class="chat-title left">Heba Albaba</p>
-                     <span class="chat-time right">10:00 Am</span>
+                     <p class="contact-title left">Heba Albaba</p>
+                     <span class="contact-time right">10:00 Am</span>
                    </div>
 
                    <div class="clearfix">
-                     <p class="truncate chatMsg-details">Lorem ipsum dolor sit am</p>
+                     <p class="truncate contactMsg-details">Lorem ipsum dolor sit am</p>
                    </div>
                  </div>
 
@@ -138,26 +142,26 @@
           </a>
 
         </li>
-        <!-- /Chat Item -->
+        <!-- /contact Item -->
 
-        <!-- Chat Item  -->
-        <li class="chat-item">
+        <!-- contact Item  -->
+        <li class="contact-item">
 
           <a href="#/chat" class="waves-effect waves-teal">
             <div class="row">
                <div class="col l3 s4">
-                 <img src="images/avatar3.png" alt="Chat Images" class="circle responsive-img chat-image"/>
+                 <img src="images/avatar3.png" alt="contact Images" class="circle responsive-img contact-image"/>
                </div>
                <div class="col l9 s8">
-                 <div class="chat-details">
+                 <div class="contact-details">
 
                    <div class="clearfix">
-                     <p class="chat-title left">Heba Albaba</p>
-                     <span class="chat-time right">10:00 Am</span>
+                     <p class="contact-title left">Heba Albaba</p>
+                     <span class="contact-time right">10:00 Am</span>
                    </div>
 
                    <div class="clearfix">
-                     <p class="truncate chatMsg-details">Lorem ipsum dolor sit am</p>
+                     <p class="truncate contactMsg-details">Lorem ipsum dolor sit am</p>
                    </div>
                  </div>
 
@@ -166,26 +170,26 @@
           </a>
 
         </li>
-        <!-- /Chat Item -->
+        <!-- /contact Item -->
 
-        <!-- Chat Item  -->
-        <li class="chat-item">
+        <!-- contact Item  -->
+        <li class="contact-item">
 
           <a href="#/chat" class="waves-effect waves-teal">
             <div class="row">
                <div class="col l3 s4">
-                 <img src="images/flight.jpg" alt="Chat Images" class="circle responsive-img chat-image"/>
+                 <img src="images/flight.jpg" alt="contact Images" class="circle responsive-img contact-image"/>
                </div>
                <div class="col l9 s8">
-                 <div class="chat-details">
+                 <div class="contact-details">
 
                    <div class="clearfix">
-                     <p class="chat-title left">Heba Albaba</p>
-                     <span class="chat-time right">10:00 Am</span>
+                     <p class="contact-title left">Heba Albaba</p>
+                     <span class="contact-time right">10:00 Am</span>
                    </div>
 
                    <div class="clearfix">
-                     <p class="truncate chatMsg-details">Lorem ipsum dolor sit am</p>
+                     <p class="truncate contactMsg-details">Lorem ipsum dolor sit am</p>
                    </div>
                  </div>
 
@@ -194,26 +198,26 @@
           </a>
 
         </li>
-        <!-- /Chat Item -->
+        <!-- /contact Item -->
 
-        <!-- Chat Item  -->
-        <li class="chat-item">
+        <!-- contact Item  -->
+        <li class="contact-item">
 
           <a href="#/chat" class="waves-effect waves-teal">
             <div class="row">
                <div class="col l3 s4">
-                 <img src="images/flight.jpg" alt="Chat Images" class="circle responsive-img chat-image"/>
+                 <img src="images/flight.jpg" alt="contact Images" class="circle responsive-img contact-image"/>
                </div>
                <div class="col l9 s8">
-                 <div class="chat-details">
+                 <div class="contact-details">
 
                    <div class="clearfix">
-                     <p class="chat-title left">Heba Albaba</p>
-                     <span class="chat-time right">10:00 Am</span>
+                     <p class="contact-title left">Heba Albaba</p>
+                     <span class="contact-time right">10:00 Am</span>
                    </div>
 
                    <div class="clearfix">
-                     <p class="truncate chatMsg-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+                     <p class="truncate contactMsg-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
                    </div>
                  </div>
 
@@ -222,26 +226,26 @@
           </a>
 
         </li>
-        <!-- /Chat Item -->
+        <!-- /contact Item -->
 
-        <!-- Chat Item  -->
-        <li class="chat-item">
+        <!-- contact Item  -->
+        <li class="contact-item">
 
           <a href="#/chat" class="waves-effect waves-teal">
             <div class="row">
                <div class="col l3 s4">
-                 <img src="images/flight.jpg" alt="Chat Images" class="circle responsive-img chat-image"/>
+                 <img src="images/flight.jpg" alt="contact Images" class="circle responsive-img contact-image"/>
                </div>
                <div class="col l9 s8">
-                 <div class="chat-details">
+                 <div class="contact-details">
 
                    <div class="clearfix">
-                     <p class="chat-title left">Heba Albaba</p>
-                     <span class="chat-time right">10:00 Am</span>
+                     <p class="contact-title left">Heba Albaba</p>
+                     <span class="contact-time right">10:00 Am</span>
                    </div>
 
                    <div class="clearfix">
-                     <p class="truncate chatMsg-details">Lorem ipsum dolor sit am</p>
+                     <p class="truncate contactMsg-details">Lorem ipsum dolor sit am</p>
                    </div>
                  </div>
 
@@ -250,27 +254,27 @@
           </a>
 
         </li>
-        <!-- /Chat Item -->
+        <!-- /contact Item -->
 
 
-        <!-- Chat Item  -->
-        <li class="chat-item">
+        <!-- contact Item  -->
+        <li class="contact-item">
 
           <a href="#/chat" class="waves-effect waves-teal">
             <div class="row">
                <div class="col l3 s4">
-                 <img src="images/flight.jpg" alt="Chat Images" class="circle responsive-img chat-image"/>
+                 <img src="images/flight.jpg" alt="contact Images" class="circle responsive-img contact-image"/>
                </div>
                <div class="col l9 s8">
-                 <div class="chat-details">
+                 <div class="contact-details">
 
                    <div class="clearfix">
-                     <p class="chat-title left">Heba Albaba</p>
-                     <span class="chat-time right">10:00 Am</span>
+                     <p class="contact-title left">Heba Albaba</p>
+                     <span class="contact-time right">10:00 Am</span>
                    </div>
 
                    <div class="clearfix">
-                     <p class="truncate chatMsg-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+                     <p class="truncate contactMsg-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
                    </div>
                  </div>
 
@@ -279,35 +283,16 @@
           </a>
 
         </li>
-        <!-- /Chat Item -->
+        <!-- /contact Item -->
 
-        <!-- /List of chats -->
+        <!-- /List of contacts -->
       </ul>
     </header>
 
-  <div class="main">
-    <div class="container">
-      <div class="row">
-        <div class="col s12 m9 l10">
-            <div ng-view=""></div>
-        </div>
-
-      </div>
-    </div>
+  <div class="main grey lighten-4">
+      <div ng-view=""></div>
   </div>
 
-
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -323,14 +308,32 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+        <!-- custom js -->
+        <script src="scripts/js/sideNav.js"></script>
+        <!-- custom js -->
+        <script src="scripts/js/nanoscroller.min.js"></script>
+        <script src="scripts/js/tether.min.js"></script>
+        <script src="scripts/js/config.js"></script>
+        <script src="scripts/js/util.js"></script>
+        <script src="scripts/js/jquery.emojiarea.js"></script>
+        <script src="scripts/js/emoji-picker.js"></script>
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/chat.js"></script>
         <!-- endbuild -->
 
-        <!-- custom js -->
-        <script src="scripts/js/sideNav.js"></script>
-        <!-- custom js -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+         <script>
+           !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+           (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+           r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+           }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+           ga('create', 'UA-XXXXX-X');
+           ga('send', 'pageview');
+        </script>
 </body>
 </html>

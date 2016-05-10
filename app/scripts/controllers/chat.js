@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name whatsAppCloneApp.controller:MainCtrl
+ * @name whatsAppCloneApp.controller:ChatCtrl
  * @description
  * # ChatCtrl
  * Controller of the whatsAppCloneApp
  */
-var app=angular.module('whatsAppCloneApp')
-  app.controller('ChatCtrl', function ($scope, $http) {
+
+angular.module('whatsAppCloneApp').controller('ChatCtrl', function ($scope, $http) {
 
 
  // get messages
@@ -34,22 +34,29 @@ var app=angular.module('whatsAppCloneApp')
       // sendMessage
       $scope.sendMessage = function(){
 
+        var elt = document.getElementsByClassName("x");
+        console.log(elt[0]);
+
+        var color = elt[0].style.background;
+        console.log(color);
+
+
+        var s=angular.toJson(elt);
+        console.log(s);
         // data object
         var data = {
             lastMessage:$scope.message,
             time:messageTime,
             messages :$scope.chatData.messages
-
         };
 
         var image=$scope.image;
         var messageDetails=$scope.message;
-
+        // console.log(messageDetails);
 
         // uploading functions
         var uploadOnlyImage = function() {
           data.messages.push({'time':messageTime,'type':'message-out',image:'images/'+image});
-          // data.lastMessage.push({})
           var url = 'http://localhost:3000/data2/2';
             $http.patch(url, data).then(function (response) {
               console.log(response.data);
@@ -65,6 +72,7 @@ var app=angular.module('whatsAppCloneApp')
 
         var uploadOnlyText = function() {
           data.messages.push({details:messageDetails,'time':messageTime,'type':'message-out'});
+
           var url = 'http://localhost:3000/data2/2';
             $http.patch(url, data).then(function (response) {
               $scope.message='';

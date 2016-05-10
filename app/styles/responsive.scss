@@ -19,16 +19,16 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
 
-  .chat-item{
-    img.chat-image{
+  .contact-item{
+    img.contact-image{
       width: 39px;
       height: 39px;
     }
-    div.chat-details{
-      p.chat-title{
+    div.contact-details{
+      p.contact-title{
         font-size: 13px;
       }
-      span.chat-time{
+      span.contact-time{
         display: none;
       }
 

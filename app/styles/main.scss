@@ -10,6 +10,39 @@
 
 body {
   padding: 0;
+  background-color: #f5f5f5 !important;
+  scrollbar-base-color: #C0C0C0;
+  scrollbar-base-color: #C0C0C0;
+  scrollbar-3dlight-color: #C0C0C0;
+  scrollbar-highlight-color: #C0C0C0;
+  scrollbar-track-color: #EBEBEB;
+  scrollbar-arrow-color: black;
+  scrollbar-shadow-color: #C0C0C0;
+  scrollbar-dark-shadow-color: #C0C0C0;
+
+}
+::-webkit-scrollbar {
+  width: 7px; height: 3px;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-track {
+   background-color: #A2A1A1;
+ }
+::-webkit-scrollbar-track-piece {
+  background-color: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+   height: 50px;
+  background-color: #A2A1A1;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}
+::-webkit-resizer {
+  background-color: #A2A1A1;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -239,18 +272,18 @@ a.button-collapse.top-nav {
 }
 
 
-// chat list
-.chat-item{
+// contact list
+.contact-item{
   height: 76px;
 
-  img.chat-image{
+  img.contact-image{
     width: 49px;
     height: 49px;
     margin-top: 8px;
   }
-  div.chat-details{
+  div.contact-details{
     border-bottom: 1px solid #eee;
-    p.chat-title{
+    p.contact-title{
       font-weight: 400;
       font-size: 16px;
       line-height: 21px;
@@ -258,14 +291,14 @@ a.button-collapse.top-nav {
       margin-top: 10px;
       margin-bottom: 5px;
     }
-    span.chat-time{
+    span.contact-time{
       font-size: 12px;
       line-height: 14px;
       margin-top: 11px;
       margin-bottom: 3px;
       color: rgba(0,0,0,0.4);
     }
-    p.chatMsg-details{
+    p.contactMsg-details{
       font-size: 13px;
       line-height: 20px;
       margin-top: 0;
@@ -275,7 +308,7 @@ a.button-collapse.top-nav {
     }
   }
   &:last-child{
-    div.chat-details{
+    div.contact-details{
       border-bottom: 0;
     }
   }
