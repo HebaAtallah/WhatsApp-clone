@@ -1,5 +1,5 @@
 {
-  "data": [
+  "data2": [
     {
       "id": 1,
       "name": "Heba",
@@ -9,27 +9,28 @@
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           "time": "10:00 AM",
-          "type": "in"
+          "type": "message-in",
+          "image": "images/flight.jpg"
         },
         {
           "details": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           "time": "10:00 AM",
-          "type": "out"
+          "type": "message-out"
         },
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
           "time": "8:00 AM",
-          "type": "in"
+          "type": "message-in"
         },
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           "time": "10:00 AM",
-          "type": "out"
+          "type": "message-out"
         },
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           "time": "10:00 AM",
-          "type": "in"
+          "type": "message-in"
         }
       ]
     },
@@ -42,27 +43,28 @@
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           "time": "10:00 AM",
-          "type": "in"
+          "type": "message-in",
+          "image": "images/flight.jpg"
         },
         {
           "details": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           "time": "10:00 AM",
-          "type": "out"
+          "type": "message-out"
         },
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
           "time": "8:00 AM",
-          "type": "in"
+          "type": "message-in"
         },
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           "time": "10:00 AM",
-          "type": "out"
+          "type": "message-out"
         },
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           "time": "10:00 AM",
-          "type": "in"
+          "type": "message-in"
         }
       ]
     },
@@ -75,27 +77,27 @@
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           "time": "10:00 AM",
-          "type": "in"
+          "type": "message-in"
         },
         {
           "details": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           "time": "10:00 AM",
-          "type": "out"
+          "type": "message-out"
         },
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
           "time": "8:00 AM",
-          "type": "in"
+          "type": "message-in"
         },
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           "time": "10:00 AM",
-          "type": "out"
+          "type": "message-out"
         },
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           "time": "10:00 AM",
-          "type": "in"
+          "type": "message-in"
         }
       ]
     },
@@ -108,27 +110,27 @@
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           "time": "10:00 AM",
-          "type": "in"
+          "type": "message-in"
         },
         {
           "details": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           "time": "10:00 AM",
-          "type": "out"
+          "type": "message-out"
         },
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
           "time": "8:00 AM",
-          "type": "in"
+          "type": "message-in"
         },
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           "time": "10:00 AM",
-          "type": "out"
+          "type": "message-out"
         },
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           "time": "10:00 AM",
-          "type": "in"
+          "type": "message-in"
         }
       ]
     },
@@ -141,27 +143,27 @@
         {
           "details": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           "time": "5:00 AM",
-          "type": "in"
+          "type": "message-in"
         },
         {
           "details": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
           "time": "10:00 AM",
-          "type": "out"
+          "type": "message-out"
         },
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
           "time": "8:00 AM",
-          "type": "in"
+          "type": "message-in"
         },
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           "time": "10:00 AM",
-          "type": "out"
+          "type": "message-out"
         },
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           "time": "10:00 AM",
-          "type": "in"
+          "type": "message-in"
         }
       ]
     }
