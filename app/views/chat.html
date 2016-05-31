@@ -35,9 +35,9 @@
       <!-- List of contacts -->
 
       <!-- contact Item  -->
-      <li class="contact-item" ng-repeat="contact in contacts | filter:search:strict">
+      <li class="contact-item" ng-repeat="contact in contacts | filter:search">
 
-        <a href="" class="waves-effect waves-teal" ng-click="userGetId({{contact.id}})">
+        <a href="" class="waves-effect waves-teal" ng-click="getChatById(contact.id)">
 
           <div class="row">
             <!-- contactImage -->

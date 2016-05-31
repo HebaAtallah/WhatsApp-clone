@@ -13,18 +13,21 @@ angular.module('whatsAppCloneApp').controller('ChatCtrl', function ($scope, $htt
 
  // get messages
   // $scope.chatData=[];
-    $http({
-      method: 'GET',
-      url: 'http://localhost:3000/data2/2'
-    }).then(function successCallback(response) {
+       $scope.getChatById =function functionName(id) {
+         console.log(id);
+         $http({
+           method: 'GET',
+           url: 'http://localhost:3000/data2/'+id
+         }).then(function successCallback(response) {
 
-        $scope.chatData=response.data;
-        console.log($scope.chatData);
+             $scope.chatData=response.data;
+             console.log($scope.chatData);
 
-      }, function errorCallback(response) {
+           }, function errorCallback(response) {
 
-        console.log("error");
-      });
+             console.log("error");
+           });
+       };
 
       // get names
       $http({
