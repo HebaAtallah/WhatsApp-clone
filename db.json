@@ -2,6 +2,7 @@
   "data2": [
     {
       "id": 1,
+      "image": "images/avatar1.png",
       "name": "Heba",
       "lastMessage": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       "time": "10:00 AM",
@@ -36,9 +37,10 @@
     },
     {
       "id": 2,
+      "image": "images/avatar2.png",
       "name": "Ahmad",
-      "lastMessage": "qswqdwdq",
-      "time": "10:00 AM",
+      "lastMessage": "test msg",
+      "time": "17:56:57",
       "messages": [
         {
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -65,11 +67,17 @@
           "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           "time": "10:00 AM",
           "type": "message-in"
+        },
+        {
+          "details": "test msg",
+          "time": "17:56:57",
+          "type": "message-out"
         }
       ]
     },
     {
       "id": 3,
+      "image": "images/avatar3.png",
       "name": "Mohammad",
       "lastMessage": "qswqdwdq",
       "time": "10:00 AM",
@@ -103,6 +111,7 @@
     },
     {
       "id": 4,
+      "image": "images/flight.jpg",
       "name": "Heba Albaba",
       "lastMessage": "qswqdwdq",
       "time": "10:00 AM",
@@ -136,6 +145,7 @@
     },
     {
       "id": 5,
+      "image": "images/avatar1.png",
       "name": "Sara",
       "lastMessage": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       "time": "5:00PM",
