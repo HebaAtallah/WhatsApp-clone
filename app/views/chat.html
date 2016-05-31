@@ -1,3 +1,77 @@
+<header>
+
+  <div class="container"><a href="" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
+
+  <ul id="nav-mobile" class="side-nav fixed left-nav">
+    <!-- userNav -->
+      <nav class="top-nav user-nav blue-grey lighten-5">
+
+        <div class="container">
+
+          <div class="nav-wrapper">
+
+            <img src="images/flight.jpg" alt="User Image" class="circle responsive-img user-image">
+
+          </div>
+
+        </div>
+
+      </nav>
+      <!-- /userNav -->
+
+      <!-- search -->
+      <li class="search grey lighten-5">
+
+        <div class="search-wrapper card">
+
+          <input id="search" placeholder="Search a contact"><i class="material-icons">search</i>
+          <div class="search-results"></div>
+
+        </div>
+
+      </li>
+      <!-- /search -->
+
+      <!-- List of contacts -->
+
+      <!-- contact Item  -->
+      <li class="contact-item" ng-repeat="contact in contacts">
+
+        <a href="" class="waves-effect waves-teal" ng-click="userGetId({{contact.id}})">
+
+          <div class="row">
+            <!-- contactImage -->
+            <div class="col l3 s4">
+              <img ng-src="{{contact.image}}" alt="contact Images" class="circle responsive-img contact-image"/>
+            </div>
+            <!--/ contactImage -->
+            <!-- conatctDetails -->
+            <div class="col l9 s8">
+
+              <div class="contact-details">
+
+                <div class="clearfix">
+                    <p class="contact-title left">{{contact.name}}</p>
+                    <span class="contact-time right">{{contact.time}}</span>
+                </div>
+
+                <div class="clearfix">
+                    <p class="truncate contactMsg-details">{{contact.lastMessage}}</p>
+                </div>
+              </div>
+
+            </div>
+            <!-- /conatctDetails -->
+          </div>
+          <!-- /row -->
+        </a>
+        <!-- /link -->
+      </li>
+      <!-- /contact Item -->
+    <!-- /List of contacts -->
+    </ul>
+</header>
+
 <!-- chat form -->
 <form name="sendMessageForm" class="sendMessageForm" ng-submit="sendMessage()" method="post">
 <!-- chat top nav  -->
@@ -30,10 +104,8 @@
           </div>
         </div>
       </div>
-  </nav>
+</nav>
 <!-- /chat top nav  -->
-
-
 
 <!-- chat-details -->
 <div class="chat-details">
@@ -51,9 +123,8 @@
 
       </div>
 
-  </div>
-  <!-- /messages -->
-
+</div>
+<!-- /messages -->
 
 <label ng-show="alertMessage" ng-model="alertMessageContent" class="alertMessage">{{alertMessageContent}}</label>
 <span style="width:100px"></span>

@@ -12,7 +12,7 @@ angular.module('whatsAppCloneApp').controller('ChatCtrl', function ($scope, $htt
 
 
  // get messages
-  $scope.chatData=[];
+  // $scope.chatData=[];
     $http({
       method: 'GET',
       url: 'http://localhost:3000/data2/2'
@@ -26,6 +26,21 @@ angular.module('whatsAppCloneApp').controller('ChatCtrl', function ($scope, $htt
         console.log("error");
       });
 
+      // get names
+      $http({
+        method: 'GET',
+        url: 'http://localhost:3000/data2'
+      }).then(function successCallback(response) {
+
+          $scope.contacts=response.data;
+          console.log($scope.contacts);
+
+        }, function errorCallback(response) {
+
+          console.log("error");
+        });
+
+
       // get date
       new Date($.now());
       var dt = new Date();
@@ -34,15 +49,18 @@ angular.module('whatsAppCloneApp').controller('ChatCtrl', function ($scope, $htt
       // sendMessage
       $scope.sendMessage = function(){
 
-        var elt = document.getElementsByClassName("x");
-        console.log(elt[0]);
+        // trying to read emoji in messages
+        // var elt = document.getElementsByClassName("x");
+        // console.log(elt[0]);
+        //
+        // var color = elt[0].style.background;
+        // console.log(color);
+        //
+        //
+        // var s=angular.toJson(elt);
+        // console.log(s);
 
-        var color = elt[0].style.background;
-        console.log(color);
 
-
-        var s=angular.toJson(elt);
-        console.log(s);
         // data object
         var data = {
             lastMessage:$scope.message,
@@ -52,7 +70,6 @@ angular.module('whatsAppCloneApp').controller('ChatCtrl', function ($scope, $htt
 
         var image=$scope.image;
         var messageDetails=$scope.message;
-        // console.log(messageDetails);
 
         // uploading functions
         var uploadOnlyImage = function() {
