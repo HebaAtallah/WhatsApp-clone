@@ -1,6 +1,6 @@
 <header>
 
-  <div class="container"><a href="" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
+  <div class="container"><a href="" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons menu">menu</i></a></div>
 
   <ul id="nav-mobile" class="side-nav fixed left-nav">
     <!-- userNav -->
@@ -166,19 +166,37 @@
 </div>
 <!-- /chat section  -->
 <script>
-    $(function() {
-      // Initializes and creates emoji set from sprite sheet
 
-      window.emojiPicker = new EmojiPicker({
+  $(document).ready(function(){
+     // Activate the side menu
+     $('.button-collapse').sideNav();
+     $('.button-collapse').click(function(){
 
-        emojiable_selector: '[data-emojiable=true]',
-        assetsPath: 'images/img/',
-        popupButtonClasses: 'fa fa-smile-o'
-      });
-      // Finds all elements with `emojiable_selector` and converts them to rich emoji input fields
-      // You may want to delay this step if you have dynamically created input fields that appear later in the loading process
-      // It can be called as many times as necessary; previously converted input fields will not be converted again
-      window.emojiPicker.discover();
+       if ($('.menu').text() =='menu') {
+         $('.menu').text('clear');
+       }
+       else{
+          $('.menu').text('menu');
+       }
+     });
 
+     $(function() {
+       // Initializes and creates emoji set from sprite sheet
+
+       window.emojiPicker = new EmojiPicker({
+
+         emojiable_selector: '[data-emojiable=true]',
+         assetsPath: 'images/img/',
+         popupButtonClasses: 'fa fa-smile-o'
+       });
+       // Finds all elements with `emojiable_selector` and converts them to rich emoji input fields
+       // You may want to delay this step if you have dynamically created input fields that appear later in the loading process
+       // It can be called as many times as necessary; previously converted input fields will not be converted again
+       window.emojiPicker.discover();
+
+     });
     });
+
+
+
   </script>
