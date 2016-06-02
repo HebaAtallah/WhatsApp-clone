@@ -83,40 +83,44 @@
 </div>
 <!-- /welcome -->
 
-<!-- chat form -->
-<form name="sendMessageForm" class="sendMessageForm" ng-submit="sendMessage()" method="post" ng-show="chatForm">
-<!-- chat top nav  -->
-  <nav class="top-nav chat-top-nav cyan darken-2">
-      <div class="nav-wrapper z-depth-1">
-        <div class="row">
-          <!-- Contact Images -->
-          <div class="col l1">
-            <img src="images/flight.jpg" alt="User Image" class="circle responsive-img chat-image">
-          </div>
 
-          <!-- conatct title -->
-          <div class="col l2">
-            <h6 class="chat-title">Heba Atallah</h6>
-          </div>
-
-          <!-- images attach -->
-          <div class="col l1 offset-l7">
-            <div class="file-field input-field upload-image-container">
-
-            <div class="uploadImage">
-              <span><i class="material-icons">add_a_photo</i></span>
-              <input type="file" accept="image/*" class="">
+<!-- chat section -->
+<div class=""  ng-show="chatSection">
+  <div class="navbar-fixed">
+    <!-- chat top nav  -->
+    <nav class="top-nav chat-top-nav cyan darken-2">
+        <div class="nav-wrapper z-depth-1">
+          <div class="row">
+            <!-- Contact Images -->
+            <div class="col l1">
+              <img ng-src="{{chatImage}}" alt="User Image" class="circle responsive-img chat-image">
             </div>
 
-            <div class="file-path-wrapper">
-              <input class="file-path validate" type="text" ng-model="image">
+            <!-- conatct title -->
+            <div class="col l2">
+              <h6 class="chat-title" ng-model="chatTitle">{{chatTitle}}</h6>
             </div>
-          </div>
+
+            <!-- images attach -->
+            <div class="col l1 offset-l5">
+              <div class="file-field input-field upload-image-container">
+
+              <div class="uploadImage">
+                <span><i class="material-icons">add_a_photo</i></span>
+                <input type="file" accept="image/*" class="">
+              </div>
+
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" ng-model="image">
+              </div>
+            </div>
+            </div>
           </div>
         </div>
-      </div>
-</nav>
-<!-- /chat top nav  -->
+    </nav>
+    <!-- /chat top nav  -->
+  </div>
+
 
 <!-- chat-details -->
 <div class="chat-details">
@@ -136,28 +140,32 @@
 
 </div>
 <!-- /messages -->
+  <!-- chat form -->
+  <form name="sendMessageForm" class="sendMessageForm" ng-submit="sendMessage()" method="post">
 
-<label ng-show="alertMessage" ng-model="alertMessageContent" class="alertMessage">{{alertMessageContent}}</label>
-<span style="width:100px"></span>
-    <!-- send container -->
-    <div class="send-conatiner">
-        <p class="lead emoji-picker-container">
-      <textarea name="typeMessage" class="materialize-textarea typeMessage" ng-model="message" placeholder="Write a message" data-emojiable="true"></textarea>
-      </p>
+    <label ng-show="alertMessage" ng-model="alertMessageContent" class="alertMessage">{{alertMessageContent}}</label>
+    <span style="width:100px"></span>
+      <!-- send container -->
+      <div class="send-conatiner">
+          <p class="lead emoji-picker-container">
+        <textarea name="typeMessage" class="materialize-textarea typeMessage" ng-model="message" placeholder="Write a message" data-emojiable="true"></textarea>
+        </p>
 
-      <div class="submit-container">
-        <button type="submit" class="btn-floating waves-effect btn-large waves-light cyan darken-3 submit-message" name="name" value="">
-          <i class="material-icons">send</i>
-        </button>
+        <div class="submit-container">
+          <button type="submit" class="btn-floating waves-effect btn-large waves-light cyan darken-3 submit-message" name="name" value="">
+            <i class="material-icons">send</i>
+          </button>
+        </div>
       </div>
-    </div>
-    <!-- /send container -->
+      <!-- /send container -->
 
-  </div>
-  <!-- chat-details -->
-</form>
-<!-- / chat form -->
-  <script>
+    </div>
+    <!-- chat-details -->
+  </form>
+  <!-- / chat form -->
+</div>
+<!-- /chat section  -->
+<script>
     $(function() {
       // Initializes and creates emoji set from sprite sheet
 

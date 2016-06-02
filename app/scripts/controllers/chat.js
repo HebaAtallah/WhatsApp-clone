@@ -12,7 +12,7 @@ angular.module('whatsAppCloneApp').controller('ChatCtrl', function ($scope, $htt
 
   // show welcome by default
   $scope.welcome=true;
-  $scope.chatForm=false;
+  $scope.chatSection=false;
   // get contacts List
   $http({
     method: 'GET',
@@ -35,13 +35,15 @@ angular.module('whatsAppCloneApp').controller('ChatCtrl', function ($scope, $htt
   $scope.getChatById =function functionName(id) {
 
     $scope.welcome=false;
-    $scope.chatForm=true;
+    $scope.chatSection=true;
     $http({
       method: 'GET',
       url: 'http://localhost:3000/data2/'+id
     }).then(function successCallback(response) {
 
     $scope.chatData=response.data;
+    $scope.chatTitle=$scope.chatData.name;
+    $scope.chatImage=$scope.chatData.image;
     }, function errorCallback(response) {
 
       console.log("error");
