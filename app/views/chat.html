@@ -72,8 +72,19 @@
     </ul>
 </header>
 
+<!-- welcome -->
+
+<div class="" ng-show="welcome">
+  <div class="valign-wrapper">
+
+    <img src="images/welcome.png" alt="Welcome Image" class="circle responsive-img welcome-img valign"/>
+  </div>
+  <p class="center-align welcome-status">This is a Web Application Clone of WhatsApp</p>
+</div>
+<!-- /welcome -->
+
 <!-- chat form -->
-<form name="sendMessageForm" class="sendMessageForm" ng-submit="sendMessage()" method="post">
+<form name="sendMessageForm" class="sendMessageForm" ng-submit="sendMessage()" method="post" ng-show="chatForm">
 <!-- chat top nav  -->
   <nav class="top-nav chat-top-nav cyan darken-2">
       <div class="nav-wrapper z-depth-1">

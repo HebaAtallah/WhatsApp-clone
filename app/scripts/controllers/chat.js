@@ -10,187 +10,115 @@
 
 angular.module('whatsAppCloneApp').controller('ChatCtrl', function ($scope, $http) {
 
+  // show welcome by default
+  $scope.welcome=true;
+  $scope.chatForm=false;
+  // get contacts List
+  $http({
+    method: 'GET',
+    url: 'http://localhost:3000/data2'
+  }).then(function successCallback(response) {
 
- // get messages
-  // $scope.chatData=[];
-       $scope.getChatById =function functionName(id) {
-         console.log(id);
-         $http({
-           method: 'GET',
-           url: 'http://localhost:3000/data2/'+id
-         }).then(function successCallback(response) {
+      $scope.contacts=response.data;
 
-             $scope.chatData=response.data;
-             console.log($scope.chatData);
+    }, function errorCallback(response) {
 
-           }, function errorCallback(response) {
+      console.log("error");
+    });
 
-             console.log("error");
-           });
-       };
+  // get date
+  new Date($.now());
+  var dt = new Date();
+  var messageTime = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
 
-      // get names
-      $http({
-        method: 'GET',
-        url: 'http://localhost:3000/data2'
-      }).then(function successCallback(response) {
+  // get messages
+  $scope.getChatById =function functionName(id) {
 
-          $scope.contacts=response.data;
-          console.log($scope.contacts);
+    $scope.welcome=false;
+    $scope.chatForm=true;
+    $http({
+      method: 'GET',
+      url: 'http://localhost:3000/data2/'+id
+    }).then(function successCallback(response) {
 
-        }, function errorCallback(response) {
+    $scope.chatData=response.data;
+    }, function errorCallback(response) {
 
-          console.log("error");
-        });
+      console.log("error");
+    });
 
+    // sendMessage
+    $scope.sendMessage = function(){
+      // data object
+      var data = {
+          lastMessage:$scope.message,
+          time:messageTime,
+          messages :$scope.chatData.messages
+      };
 
-      // get date
-      new Date($.now());
-      var dt = new Date();
-      var messageTime = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+      var image=$scope.image;
+      var messageDetails=$scope.message;
 
-      // sendMessage
-      $scope.sendMessage = function(){
+      // uploading functions
+      var uploadOnlyImage = function() {
+        data.messages.push({'time':messageTime,'type':'message-out',image:'images/'+image});
+        var url = 'http://localhost:3000/data2/'+id;
+          $http.patch(url, data).then(function (response) {
+            console.log(response.data);
 
-        // trying to read emoji in messages
-        // var elt = document.getElementsByClassName("x");
-        // console.log(elt[0]);
-        //
-        // var color = elt[0].style.background;
-        // console.log(color);
-        //
-        //
-        // var s=angular.toJson(elt);
-        // console.log(s);
+            $scope.message='';
 
+              console.log('all is good', response.data);
+          }, function (error) {
 
-        // data object
-        var data = {
-            lastMessage:$scope.message,
-            time:messageTime,
-            messages :$scope.chatData.messages
-        };
+              console.log('an error occurred', error.data);
+          });
+      };
 
-        var image=$scope.image;
-        var messageDetails=$scope.message;
+      var uploadOnlyText = function() {
+        data.messages.push({details:messageDetails,'time':messageTime,'type':'message-out'});
 
-        // uploading functions
-        var uploadOnlyImage = function() {
-          data.messages.push({'time':messageTime,'type':'message-out',image:'images/'+image});
-          var url = 'http://localhost:3000/data2/2';
-            $http.patch(url, data).then(function (response) {
-              console.log(response.data);
+        var url = 'http://localhost:3000/data2/'+id;
+          $http.patch(url, data).then(function (response) {
+            $scope.message='';
 
-              $scope.message='';
+              console.log('all is good', response.data);
+          }, function (error) {
 
-                console.log('all is good', response.data);
-            }, function (error) {
+              console.log('an error occurred', error.data);
+          });
+      };
 
-                console.log('an error occurred', error.data);
-            });
-        };
+      var uploadTextAndImage = function() {
+        data.messages.push({details:messageDetails,'time':messageTime,'type':'message-out',image:'images/'+image});
+        var url = 'http://localhost:3000/data2/'+id;
+          $http.patch(url, data).then(function (response) {
+            console.log(response.data);
 
-        var uploadOnlyText = function() {
-          data.messages.push({details:messageDetails,'time':messageTime,'type':'message-out'});
+            $scope.message='';
 
-          var url = 'http://localhost:3000/data2/2';
-            $http.patch(url, data).then(function (response) {
-              $scope.message='';
+              console.log('all is good', response.data);
+          }, function (error) {
 
-                console.log('all is good', response.data);
-            }, function (error) {
-
-                console.log('an error occurred', error.data);
-            });
-        };
-
-        var uploadTextAndImage = function() {
-          data.messages.push({details:messageDetails,'time':messageTime,'type':'message-out',image:'images/'+image});
-          var url = 'http://localhost:3000/data2/2';
-            $http.patch(url, data).then(function (response) {
-              console.log(response.data);
-
-              $scope.message='';
-
-                console.log('all is good', response.data);
-            }, function (error) {
-
-                console.log('an error occurred', error.data);
-            });
-        };
+              console.log('an error occurred', error.data);
+          });
+      };
 
 
-        // empty message
-        if(messageDetails==undefined && image==undefined ){
-          $scope.alertMessage=true;
-          $scope.alertMessageContent="The message is empty";
-        }
+      // empty message
+      if(messageDetails==undefined && image==undefined ){
+        $scope.alertMessage=true;
+        $scope.alertMessageContent="The message is empty";
+      }
 
-        if(messageDetails=='' && image==undefined){
-          messageDetails=undefined;
-          $scope.alertMessage=true;
-          $scope.alertMessageContent="The message is empty";
-        }
+      if(messageDetails=='' && image==undefined){
+        messageDetails=undefined;
+        $scope.alertMessage=true;
+        $scope.alertMessageContent="The message is empty";
+      }
 
-        if(messageDetails=='' && image !=undefined){
-          messageDetails=undefined;
-
-          var getImageExtension= image.substring(image.lastIndexOf('.') + 1).toLowerCase();
-          var imageRightExtension=false;
-
-          if (getImageExtension  == "gif" || getImageExtension == "png" || getImageExtension == "bmp"
-                  || getImageExtension == "jpeg" || getImageExtension == "jpg") {
-
-                imageRightExtension=true;
-          }
-          // right extension
-          if (imageRightExtension==true) {
-
-            $scope.alertMessage=false;
-            uploadOnlyImage();
-
-          }
-          // wrong extension
-          else if (imageRightExtension==false) {
-            $scope.alertMessage=true;
-            $scope.alertMessageContent="You should upload only images";
-          }
-        }
-
-        // only text
-        if (messageDetails !=undefined && image ==undefined){
-              $scope.alertMessage=false;
-              uploadOnlyText();
-          }
-
-        // only image and image validation
-        if (messageDetails==undefined && image !=undefined) {
-
-          var getImageExtension= image.substring(image.lastIndexOf('.') + 1).toLowerCase();
-          var imageRightExtension=false;
-
-          if (getImageExtension  == "gif" || getImageExtension == "png" || getImageExtension == "bmp"
-                  || getImageExtension == "jpeg" || getImageExtension == "jpg") {
-
-                imageRightExtension=true;
-          }
-
-          // right extension
-          if (imageRightExtension==true) {
-
-            $scope.alertMessage=false;
-            uploadOnlyImage();
-
-          }
-          // wrong extension
-          else if (imageRightExtension==false) {
-            $scope.alertMessage=true;
-            $scope.alertMessageContent="You should upload only images";
-          }
-        }
-
-        // text and image
-      if (messageDetails!=undefined && image !=undefined) {
+      if(messageDetails=='' && image !=undefined){
+        messageDetails=undefined;
 
         var getImageExtension= image.substring(image.lastIndexOf('.') + 1).toLowerCase();
         var imageRightExtension=false;
@@ -198,24 +126,91 @@ angular.module('whatsAppCloneApp').controller('ChatCtrl', function ($scope, $htt
         if (getImageExtension  == "gif" || getImageExtension == "png" || getImageExtension == "bmp"
                 || getImageExtension == "jpeg" || getImageExtension == "jpg") {
 
-                  imageRightExtension=true;
+              imageRightExtension=true;
         }
-        console.log(imageRightExtension);
         // right extension
         if (imageRightExtension==true) {
 
           $scope.alertMessage=false;
+          uploadOnlyImage();
 
-          uploadTextAndImage();
         }
         // wrong extension
         else if (imageRightExtension==false) {
           $scope.alertMessage=true;
           $scope.alertMessageContent="You should upload only images";
-          uploadOnlyText();
-
         }
       }
 
-    };
+      // only text
+      if (messageDetails !=undefined && image ==undefined){
+            $scope.alertMessage=false;
+            uploadOnlyText();
+        }
+
+      // only image and image validation
+      if (messageDetails==undefined && image !=undefined) {
+
+        var getImageExtension= image.substring(image.lastIndexOf('.') + 1).toLowerCase();
+        var imageRightExtension=false;
+
+        if (getImageExtension  == "gif" || getImageExtension == "png" || getImageExtension == "bmp"
+                || getImageExtension == "jpeg" || getImageExtension == "jpg") {
+
+              imageRightExtension=true;
+        }
+
+        // right extension
+        if (imageRightExtension==true) {
+
+          $scope.alertMessage=false;
+          uploadOnlyImage();
+
+        }
+        // wrong extension
+        else if (imageRightExtension==false) {
+          $scope.alertMessage=true;
+          $scope.alertMessageContent="You should upload only images";
+        }
+      }
+
+      // text and image
+    if (messageDetails!=undefined && image !=undefined) {
+
+      var getImageExtension= image.substring(image.lastIndexOf('.') + 1).toLowerCase();
+      var imageRightExtension=false;
+
+      if (getImageExtension  == "gif" || getImageExtension == "png" || getImageExtension == "bmp"
+              || getImageExtension == "jpeg" || getImageExtension == "jpg") {
+
+                imageRightExtension=true;
+      }
+      console.log(imageRightExtension);
+      // right extension
+      if (imageRightExtension==true) {
+
+        $scope.alertMessage=false;
+
+        uploadTextAndImage();
+      }
+      // wrong extension
+      else if (imageRightExtension==false) {
+        $scope.alertMessage=true;
+        $scope.alertMessageContent="You should upload only images";
+        uploadOnlyText();
+
+      }
+    }
+
+  };
+
+
+  };
+
+
+
+
+
+
+
 });
