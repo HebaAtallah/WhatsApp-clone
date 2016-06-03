@@ -334,7 +334,7 @@
     this.id = id;
 		this.$textarea = $textarea;
     this.emojiPopup = options.emojiPopup;
-		this.$editor = $('<div>').addClass('emoji-wysiwyg-editor').addClass($($textarea)[0].className);
+		this.$editor = $('<div ng-model="emojiMessage">').addClass('emoji-wysiwyg-editor').addClass($($textarea)[0].className);
     this.$editor.data('self', this);
 
     if ($textarea.attr('maxlength')) {

@@ -33,7 +33,6 @@ angular.module('whatsAppCloneApp').controller('ChatCtrl', function ($scope, $htt
 
   // get messages
   $scope.getChatById =function functionName(id) {
-
     $scope.welcome=false;
     $scope.chatSection=true;
     $http({

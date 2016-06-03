@@ -92,18 +92,18 @@
         <div class="nav-wrapper z-depth-1">
           <div class="row">
             <!-- Contact Images -->
-            <div class="col l1">
+            <div class="col l1 m1 s2 offset-l0 offset-m1 offset-s2">
               <img ng-src="{{chatImage}}" alt="User Image" class="circle responsive-img chat-image">
             </div>
 
             <!-- conatct title -->
-            <div class="col l2">
+            <div class="col l2 m2 s5">
               <h6 class="chat-title" ng-model="chatTitle">{{chatTitle}}</h6>
             </div>
 
             <!-- images attach -->
-            <div class="col l1 offset-l5">
-              <div class="file-field input-field upload-image-container">
+            <div class="col l1 m1 s1 offset-l4 offset-m6 offset-s2">
+              <div class="file-field input-field upload-image-container right">
 
               <div class="uploadImage">
                 <span><i class="material-icons">add_a_photo</i></span>
@@ -132,7 +132,7 @@
           <div class="message-details {{messagesDetails.type}}">
 
             <p class="message-text">{{messagesDetails.details}}</p>
-            <img ng-src="{{messagesDetails.image}}" ng-show="messagesDetails.image" class="message-image" alt=""/>
+            <img ng-src="{{messagesDetails.image}}" ng-show="messagesDetails.image" class="message-image responsive-img" alt=""/>
             <p class="message-time">{{messagesDetails.time}}</p>
           </div>
 
@@ -166,8 +166,8 @@
 </div>
 <!-- /chat section  -->
 <script>
-
   $(document).ready(function(){
+// window.scrollTo(0, document.body.scrollHeight);
      // Activate the side menu
      $('.button-collapse').sideNav();
      $('.button-collapse').click(function(){
@@ -179,7 +179,6 @@
           $('.menu').text('menu');
        }
      });
-
      $(function() {
        // Initializes and creates emoji set from sprite sheet
 

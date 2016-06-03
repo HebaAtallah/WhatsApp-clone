@@ -4,20 +4,23 @@
 **********************************/
 
 @media (max-width: 767px) {
+	.welcome-img {
+    width: 300px !important;
+	}
 	p.welcome-status{
-        font-size: 2rem;
+        font-size: 1.8rem;
   }
   ul.side-nav.fixed{
     width: 280px;
   }
-	div.contact-details{
-		p.contact-title{
-			font-size: 13px !important;
-		}
-		span.contact-time{
-			display: none;
-		}
-
+	.message-image {
+	    max-width: inherit !important;
+	}
+	.emoji-picker-icon {
+		top: 34px;
+	}
+	.emoji-menu {
+		transform: translateX(17px) translateY(584px) translateZ(0px) !important;
 	}
 }
 
@@ -26,6 +29,7 @@
   Tablets
 **********************************/
 
+
 @media (min-width: 768px) and (max-width: 991px) {
 
   .contact-item{
@@ -33,20 +37,13 @@
       width: 39px;
       height: 39px;
     }
-    div.contact-details{
-      p.contact-title{
-        font-size: 13px;
-      }
-      span.contact-time{
-        display: none;
-      }
-
-    }
   }
-
+	.emoji-menu {
+    transform: translateX(17px) translateY(507px) translateZ(0px) !important;
+		}
 }
 
-@media only screen and (max-width: 992px) {
+@media(max-width: 992px) {
   #front-page-nav ul.side-nav {
     li {
       float: none;
@@ -61,14 +58,50 @@
   }
   .main{
         padding-left: 0;
-  }
+				div.contact-details{
+					p.contact-title{
+						font-size: 13px !important;
+					}
+					span.contact-time{
+						display: none;
+					}
+
+				}
+				.submit-message{
+					width: 37px;
+					height: 37px;
+					line-height: 37px;
+					right: 25px !important;
+					i{
+						font-size: 1.4rem;
+						line-height: 37px;
+					}
+				}
+	}
+
+
 }
 
 
 
 @media (min-width: 991px) {
   ul.side-nav.fixed{
-    // width: 30% !important;
     width: 341px !important;
   }
 }
+
+/**********************************
+  Desktop Small - Large Tablets
+**********************************/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	.emoji-menu {
+		transform: translateX(356px) translateY(595px) translateZ(0px) !important;
+	}
+}
+
+/**********************************
+  Desktop
+**********************************/
+
+@media(max-width: 1200px){}
